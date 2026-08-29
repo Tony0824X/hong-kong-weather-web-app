@@ -1,0 +1,10 @@
+{
+  "name": "Hong Kong Weather",
+  "short_name": "HK Weather",
+  "description": "Live Hong Kong weather conditions and warnings.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f6f0",
+  "theme_color": "#1b7296",
+  "icons": [{ "src": "/hk-weather-icon.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any maskable" }]
+}

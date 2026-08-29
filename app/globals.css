@@ -1,85 +1,11 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
-
 @custom-variant dark (&:is(.dark *));
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-warning: var(--warning);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --font-sans: 'DM Sans', 'Arial', sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
-}
-
-:root {
-  color-scheme: light;
-  --background: oklch(0.975 0.012 85);
-  --foreground: oklch(0.19 0.035 253);
-  --card: oklch(0.995 0.006 90);
-  --card-foreground: oklch(0.19 0.035 253);
-  --popover: oklch(0.995 0.006 90);
-  --popover-foreground: oklch(0.19 0.035 253);
-  --primary: oklch(0.47 0.16 222);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.94 0.025 210);
-  --secondary-foreground: oklch(0.25 0.07 230);
-  --muted: oklch(0.94 0.018 85);
-  --muted-foreground: oklch(0.48 0.035 250);
-  --accent: oklch(0.91 0.08 200);
-  --accent-foreground: oklch(0.2 0.07 230);
-  --destructive: oklch(0.58 0.19 25);
-  --warning: oklch(0.68 0.15 73);
-  --border: oklch(0.87 0.025 240);
-  --input: oklch(0.87 0.025 240);
-  --ring: oklch(0.47 0.16 222);
-  --radius: 0.8rem;
-}
-
-* { @apply border-border outline-ring/50; }
-html { background: var(--background); }
-body { @apply bg-background text-foreground; font-family: Arial, sans-serif; }
-
-.weather-grid { background-image: linear-gradient(to right, oklch(0.47 0.16 222 / 0.045) 1px, transparent 1px), linear-gradient(to bottom, oklch(0.47 0.16 222 / 0.045) 1px, transparent 1px); background-size: 42px 42px; mask-image: linear-gradient(to bottom, black, transparent 78%); }
-.brand-mark { @apply flex size-9 items-center justify-center rounded-lg bg-primary text-primary-foreground; }
-.refresh-button { @apply flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-2 text-xs font-medium transition-colors hover:border-primary hover:text-primary disabled:cursor-wait disabled:opacity-60; }
-.eyebrow { @apply flex items-center gap-2 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground; }
-.live-dot, .status-dot { @apply size-2 rounded-full bg-primary; box-shadow: 0 0 0 4px oklch(0.47 0.16 222 / 0.12); }
-.dashboard-card, .section-panel { @apply rounded-xl border border-border bg-card shadow-[0_16px_50px_oklch(0.24_0.05_240_/_0.06)]; }
-.temperature { @apply text-7xl font-semibold leading-none tracking-[-0.08em]; }
-.weather-icon-large { @apply flex size-32 items-center justify-center rounded-full bg-accent text-primary; }
-.section-panel { @apply p-6 sm:p-8; }
-.section-heading { @apply flex items-start justify-between border-b border-border pb-5; }
-.section-heading h2 { @apply mt-2 text-2xl font-semibold tracking-tight; }
-.location-list { @apply mt-3; }
-.location-row { @apply flex w-full items-center gap-3 border-b border-border/70 py-4 text-sm transition-colors hover:bg-secondary/50; }
-.location-row.selected { @apply text-primary; }
-.location-weather-icon { @apply flex size-9 items-center justify-center rounded-lg bg-secondary text-primary [&_svg]:size-5; }
-.selected-location { @apply flex items-center justify-between rounded-lg bg-secondary px-4 py-4; }
-.warning-stack { @apply mt-6 space-y-3; }
-.warning-row { @apply flex gap-3 rounded-lg border border-warning/30 bg-warning/10 p-4 text-sm leading-6 text-foreground; }
-.warning-row svg { @apply mt-1 shrink-0 text-warning; }
-.all-clear { @apply mt-8 rounded-lg border border-primary/20 bg-secondary/50 p-6 text-center; }
-.clear-icon { @apply mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-accent text-primary; }
-
-@media (max-width: 640px) { .temperature { font-size: 4.5rem; } .weather-icon-large { @apply size-24; } .weather-icon-large svg { width: 56px; height: 56px; } }
+@theme inline { --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground); --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground); --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-destructive: var(--destructive); --color-border: var(--border); --color-input: var(--input); --color-ring: var(--ring); --color-warning: var(--warning); --radius-sm: calc(var(--radius) * .6); --radius-md: calc(var(--radius) * .8); --radius-lg: var(--radius); --radius-xl: calc(var(--radius) * 1.4); --font-sans: 'DM Sans', Arial, sans-serif; --font-mono: 'IBM Plex Mono', monospace; }
+:root { color-scheme: light; --background: oklch(.975 .012 85); --foreground: oklch(.19 .035 253); --card: oklch(.995 .006 90); --card-foreground: oklch(.19 .035 253); --popover: oklch(.995 .006 90); --popover-foreground: oklch(.19 .035 253); --primary: oklch(.47 .16 222); --primary-foreground: oklch(.99 0 0); --secondary: oklch(.94 .025 210); --secondary-foreground: oklch(.25 .07 230); --muted: oklch(.94 .018 85); --muted-foreground: oklch(.48 .035 250); --accent: oklch(.91 .08 200); --accent-foreground: oklch(.2 .07 230); --destructive: oklch(.58 .19 25); --warning: oklch(.68 .15 73); --border: oklch(.87 .025 240); --input: oklch(.87 .025 240); --ring: oklch(.47 .16 222); --radius: .8rem; }
+.dark { color-scheme: dark; --background: oklch(.16 .025 245); --foreground: oklch(.94 .02 210); --card: oklch(.21 .03 245); --card-foreground: oklch(.94 .02 210); --popover: oklch(.21 .03 245); --popover-foreground: oklch(.94 .02 210); --secondary: oklch(.25 .04 235); --secondary-foreground: oklch(.9 .03 210); --muted: oklch(.25 .035 245); --muted-foreground: oklch(.7 .035 220); --accent: oklch(.3 .09 220); --accent-foreground: oklch(.94 .02 210); --border: oklch(.32 .04 235); --input: oklch(.32 .04 235); }
+* { @apply border-border outline-ring/50; } html { background: var(--background); } body { @apply bg-background text-foreground; font-family: Arial, sans-serif; }
+.weather-grid { background-image: linear-gradient(to right, oklch(.47 .16 222 / .045) 1px, transparent 1px), linear-gradient(to bottom, oklch(.47 .16 222 / .045) 1px, transparent 1px); background-size: 42px 42px; mask-image: linear-gradient(to bottom, black, transparent 78%); }
+.brand-mark { @apply flex size-9 items-center justify-center rounded-lg bg-primary text-primary-foreground; } .refresh-button, .theme-button { @apply flex items-center gap-2 rounded-full border border-border bg-card px-3 py-2 text-xs font-medium transition-colors hover:border-primary hover:text-primary disabled:cursor-wait disabled:opacity-60; } .theme-button { @apply size-9 justify-center px-0; } .eyebrow { @apply flex items-center gap-2 font-mono text-[10px] font-semibold uppercase tracking-[.2em] text-muted-foreground; } .live-dot, .status-dot { @apply size-2 rounded-full bg-primary; box-shadow: 0 0 0 4px oklch(.47 .16 222 / .12); } .dashboard-card, .section-panel { @apply rounded-xl border border-border bg-card shadow-[0_16px_50px_oklch(.24_.05_240_/_6%)]; } .temperature { @apply text-6xl font-semibold leading-none tracking-[-.08em]; } .weather-icon-large { @apply flex size-24 items-center justify-center rounded-full bg-accent text-primary; } .section-panel { @apply p-4 sm:p-7; } .location-list { @apply mt-1; } .location-row { @apply flex w-full items-center gap-3 border-b border-border/70 py-3.5 text-sm transition-colors hover:bg-secondary/50; } .location-row.selected { @apply text-primary; } .location-weather-icon { @apply flex size-9 items-center justify-center rounded-lg bg-secondary text-primary [&_svg]:size-5; } .selected-location { @apply flex items-center justify-between rounded-lg bg-secondary px-4 py-3.5; } .warning-stack { @apply space-y-3; } .warning-row { @apply flex gap-3 rounded-lg border border-warning/30 bg-warning/10 p-4 text-sm leading-6; } .warning-row svg { @apply mt-1 shrink-0 text-warning; } .all-clear { @apply rounded-lg border border-primary/20 bg-secondary/50 p-6 text-center; } .clear-icon { @apply mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-accent text-primary; } .quick-link { @apply flex items-center gap-3 rounded-xl border border-border bg-card p-4 text-left text-primary transition-colors hover:border-primary; } .quick-link span:nth-child(2) { @apply min-w-0 flex-1; } .quick-link b, .quick-link small { @apply block; } .quick-link b { @apply text-sm text-foreground; } .quick-link small { @apply mt-1 text-xs font-normal text-muted-foreground; } .qa-list { @apply overflow-hidden rounded-xl border border-border bg-card; } .qa-item { @apply border-b border-border px-4 py-4 last:border-b-0; } .qa-item summary { @apply flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-medium; } .qa-item summary::-webkit-details-marker { display: none; } .qa-item summary span { @apply text-xl font-normal text-primary; } .qa-item p { @apply mt-3 pr-5 text-sm leading-6 text-muted-foreground; } .home-return { @apply mt-5 flex items-center gap-2 text-sm font-medium text-primary hover:underline; } .bottom-nav { @apply fixed inset-x-0 bottom-0 z-50 mx-auto flex max-w-5xl justify-around border-t border-border bg-card/95 px-2 pb-[max(.5rem,env(safe-area-inset-bottom))] pt-2 shadow-[0_-8px_30px_oklch(.2_.04_240_/_8%)] backdrop-blur; } .bottom-nav button { @apply flex min-w-16 flex-col items-center gap-1 rounded-lg px-3 py-1.5 text-[10px] text-muted-foreground transition-colors; } .bottom-nav button svg { @apply size-5; } .bottom-nav button.active { @apply bg-secondary text-primary; }
+@media (min-width: 640px) { .bottom-nav { @apply bottom-4 rounded-xl border; } }
